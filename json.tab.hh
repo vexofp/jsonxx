@@ -45,7 +45,7 @@ extern int yydebug;
  #include "json_st.hh" 
 
 /* Line 2053 of yacc.c  */
-#line 49 "json.tab.h"
+#line 49 "json.tab.hh"
 
 /* Tokens.  */
 #ifndef YYTOKENTYPE
@@ -89,7 +89,7 @@ typedef union YYSTYPE
 
 
 /* Line 2053 of yacc.c  */
-#line 93 "json.tab.h"
+#line 93 "json.tab.hh"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

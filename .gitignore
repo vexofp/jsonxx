@@ -1,6 +1,6 @@
 # Created by http://gitignore.io
 
-libjsonxx.so
+build/*
 
 ### C++ ###
 # Compiled Object files
