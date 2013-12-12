@@ -1,0 +1,32 @@
+# Created by http://gitignore.io
+
+libjsonxx.so
+
+### C++ ###
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+### Linux ###
+.*
+!.gitignore
+!.git*
+*~
+
+
+### vim ###
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
