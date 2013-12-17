@@ -1,5 +1,14 @@
-
 forked from https://bitbucket.org/tunnuz/json
+
+to build
+```
+clone & cd into repo
+mkdir build
+cd build
+cmake ../
+make
+make install
+```
 
 ***
 
