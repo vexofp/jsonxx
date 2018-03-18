@@ -314,6 +314,8 @@ void Array::push_back(const Value& v)
     _array.push_back(v);
 }
 
+unsigned int JSON::ind = 0;
+
 void JSON::indent(ostream& os)
 {
     for (unsigned int i  = 0; i < ind; i++)

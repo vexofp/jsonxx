@@ -248,10 +248,10 @@ namespace JSON
     };
     
     /** Indentation counter */
-    static unsigned int ind;
+    extern unsigned int ind;
 
     /** Print correct indentation before printing anything */
-    static void indent(std::ostream& os = std::cout);
+    void indent(std::ostream& os = std::cout);
 }
 
 /** Output operator for Values */

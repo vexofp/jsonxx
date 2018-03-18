@@ -1,6 +1,9 @@
 # Created by http://gitignore.io
 
 build/*
+json.tab.c
+json.tab.h
+lex.yy.c
 
 ### C++ ###
 # Compiled Object files
