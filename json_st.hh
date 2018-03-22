@@ -12,7 +12,7 @@ namespace JSON
     /** Possible JSON type of a value (array, object, bool, ...). */
     enum ValueType
     {
-        INT,        // JSON's int
+        LONG,        // JSON's long
         FLOAT,      // JSON's float 3.14 12e-10
         BOOL,       // JSON's boolean (true, false)
         STRING,     // JSON's string " ... " or (not really JSON) ' ... '
@@ -171,6 +171,9 @@ namespace JSON
         Value(const Value& v);
     
         /** Constructor from int. */
+        Value(const long long i);
+    
+        /** Constructor from int. */
         Value(const int i);
     
         /** Constructor from float. */
@@ -218,8 +221,8 @@ namespace JSON
         /** Cast operator for float */
         operator float() const { return float_v; }
     
-        /** Cast operator for float */
-        operator int() const { return int_v; }
+        /** Cast operator for long */
+        operator long long() const { return long_v; }
     
         /** Cast operator for float */
         operator bool() const { return bool_v; }
@@ -237,7 +240,7 @@ namespace JSON
     protected:
     
         float           float_v;
-        int             int_v;
+        long long       long_v;
         bool            bool_v;
         std::string     string_v;
     

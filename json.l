@@ -7,7 +7,7 @@
     }
     
     // Needed for the tokens
-    #include "json.tab.hh"
+    #include "json.tab.h"
 %}
 
 %%
@@ -22,7 +22,7 @@
 ":"                                     { return COLON; }
 \n                                      { }
 [ \t]                                   { }
-[-+]?[0-9]+                             { yylval.int_v = atoi(yytext); return NUMBER_I; }
+[-+]?[0-9]+                             { yylval.long_v = strtoll(yytext, NULL, 0); return NUMBER_I; }
 [-+]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?  { yylval.float_v = atof(yytext); return NUMBER_F; }
 true|false                              { yylval.bool_v = ( strcmp(yytext, "true") == 0 ? true : false); return BOOLEAN; }
 null                                    { return NULL_T; }

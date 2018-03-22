@@ -5,7 +5,9 @@ using namespace JSON;
 
 Value::Value() : type_t(NIL) { }
 
-Value::Value(const int i) : int_v(i), type_t(INT) { }
+Value::Value(const long long i) : long_v(i), type_t(LONG) { }
+
+Value::Value(const int i) : long_v(i), type_t(LONG) { }
 
 Value::Value(const float f) : float_v(f), type_t(FLOAT) { }
 
@@ -30,9 +32,9 @@ Value::Value(const Value& v)
     switch(v.type())
     {
         /** Base types */
-        case INT:
-            int_v = v.int_v;
-            type_t = INT;
+        case LONG:
+            long_v = v.long_v;
+            type_t = LONG;
             break;
         
         case FLOAT:
@@ -73,9 +75,9 @@ Value::Value(const Value&& v)
     switch(v.type())
     {
         /** Base types */
-        case INT:
-            int_v = v.int_v;
-            type_t = INT;
+        case LONG:
+            long_v = v.long_v;
+            type_t = LONG;
             break;
         
         case FLOAT:
@@ -116,9 +118,9 @@ Value& Value::operator=(const Value& v)
     switch(v.type())
     {
         /** Base types */
-        case INT:
-            int_v = v.int_v;
-            type_t = INT;
+        case LONG:
+            long_v = v.long_v;
+            type_t = LONG;
             break;
         
         case FLOAT:
@@ -162,9 +164,9 @@ Value& Value::operator=(const Value&& v)
     switch(v.type())
     {
         /** Base types */
-        case INT:
-            int_v = v.int_v;
-            type_t = INT;
+        case LONG:
+            long_v = v.long_v;
+            type_t = LONG;
             break;
         
         case FLOAT:
@@ -327,8 +329,8 @@ ostream& operator<<(ostream& os, const Value& v)
     switch(v.type())
     {
         /** Base types */
-        case INT:
-            os << (int)v;
+        case LONG:
+            os << (long long)v;
             break;
         
         case FLOAT:

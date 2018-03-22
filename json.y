@@ -22,7 +22,7 @@
 %union
 {
     // "Pure" types
-    int int_v;
+    long long long_v;
     float float_v;
     bool bool_v;
     bool null_p;
@@ -36,7 +36,7 @@
 
 /** Define types for union values */
 %type<string_v> DOUBLE_QUOTED_STRING SINGLE_QUOTED_STRING string
-%type<int_v> NUMBER_I
+%type<long_v> NUMBER_I
 %type<float_v> NUMBER_F
 %type<bool_v> BOOLEAN
     
