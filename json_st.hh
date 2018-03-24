@@ -249,9 +249,6 @@ namespace JSON
     
         ValueType       type_t;
     };
-    
-    /** Indentation counter */
-    extern unsigned int ind;
 
     /** Print correct indentation before printing anything */
     void indent(std::ostream& os = std::cout);
